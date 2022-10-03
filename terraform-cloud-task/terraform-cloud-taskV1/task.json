@@ -1,0 +1,50 @@
+{
+    "id": "6df1a55a-f9d4-418f-866c-93ab5ace798c",
+    "name": "TerraformCloud",
+    "friendlyName": "Terraform Cloud",
+    "description": "This task allows connecting to Terraform Enterprise or Cloud and executing runs.",
+    "author": "Jared Holgate",
+    "helpMarkDown": "TBC",
+    "category": "Utility",
+    "visibility": [
+      "Build",
+      "Release"
+    ],
+    "demands": [],
+    "version": {
+      "Major": "1",
+      "Minor": "0",
+      "Patch": "0"
+    },
+    "minimumAgentVersion": "1.95.0",
+    "instanceNameFormat": "TerraformCloud $(message)",
+    "inputs": [
+      {
+        "name": "Length",
+        "type": "int",
+        "label": "Password Length",
+        "required": false,
+        "helpMarkDown": "The length of the password"
+      },
+      {
+        "name": "Resultname",
+        "type": "String",
+        "label": "Name of the result variable",
+        "defaultValue": "",
+        "required": true,
+        "helpMarkDown": "The name of the output variable"
+      },
+      {
+        "name": "isPlainText",
+        "type": "boolean",
+        "label": "output in plain text",
+        "required": false,
+        "helpMarkDown": "Set to true to get an output in plain text"
+      }
+    ],
+    "execution": {
+      "PowerShell3": {
+        "target": "taskScript.ps1"
+      }
+    }
+  }

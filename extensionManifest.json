@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "PasswordGenerator",
+    "name": "Password Generator",
+    "version": "0.1.1",
+    "publisher": "4bes",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "A task that generates a password for the pipeline",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "PasswordGenerator/icon.png"        
+    },
+    "files": [
+        {
+            "path": "PasswordGenerator"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "PasswordGenerator",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "PasswordGenerator"
+            }
+        }
+    ]
+}
